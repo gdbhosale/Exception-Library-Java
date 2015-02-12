@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<MYLIB name="Ganesha">
+	<PROJECT name="Bank">
+		<MODULE name="createAccount">
+			<INVALID_USER_EXCEPTION name="InvalidUserException">
+					<LOG name="LogAction" file="BankLog.log"></LOG>
+			</INVALID_USER_EXCEPTION>
+			<INSUFFICIENT_BALANCE_EXCEPTION name="InsufficientBalanceException">
+					<LOG name="LogAction" file="BankLog.log"></LOG>
+			</INSUFFICIENT_BALANCE_EXCEPTION>
+		</MODULE>
+		<MODULE name="showBalance">
+			<INVALID_USER_EXCEPTION name="InvalidUserException">
+					<LOG name="LogAction" file="BankLog.log"></LOG>
+			</INVALID_USER_EXCEPTION>
+			<INSUFFICIENT_BALANCE_EXCEPTION name="InsufficientBalanceException">
+					<LOG name="LogAction" file="BankLog.log"></LOG>
+			</INSUFFICIENT_BALANCE_EXCEPTION>
+			
+			<SQl_EXCEPTION name="SQLException.1017">
+					<SHUTDOWN name="ShutDownAction" time="3000"></SHUTDOWN>
+					<LOG name="LogAction" file="BankLog.log"></LOG>
+					<EMAIL name="EmailAction" to="gdb_sci123@rediff.com" from="gdb.sci123@gmail.com" subject="Wrong Database Username/Password" message="Wrong Database Username/Password given to Machine...Check for that..."></EMAIL>
+			</SQl_EXCEPTION>
+			
+			<SQl_EXCEPTION name="SQLException.17008">
+					<LOG name="LogAction" file="BankLog.log"></LOG>
+					<RETRY name="RetryAction" freq="2" interval="1000" file="BankLog.log" time="3000" query="jdbc:oracle:thin:@127.0.0.1:1521:XE" username="System" password="ggansaal"></RETRY>
+					<EMAIL name="EmailAction" to="gdb_sci123@rediff.com" from="gdb.sci123@gmail.com" subject="Closed Connection" message="Closed Connection has been Used... Check for that..."></EMAIL>
+			</SQl_EXCEPTION>
+			
+			<SQl_EXCEPTION name="SQLException.17002">
+					<RETRY name="RetryAction" freq="2" interval="1000" file="BankLog.log" time="3000" query="jdbc:oracle:thin:@127.0.0.1:1521:XE" username="System" password="ggansaal"></RETRY>
+					<LOG name="LogAction" file="BankLog.log"></LOG>
+			</SQl_EXCEPTION>
+			
+			<SQl_EXCEPTION name="SQLException.0">
+					<LOG name="LogAction" file="BankLog.log"></LOG>
+					<EMAIL name="EmailAction" to="gdb_sci123@rediff.com" from="gdb.sci123@gmail.com" subject="Database Connection refused" message="Database refused the connection...Check if database is shut down..."></EMAIL>
+					<RETRY name="RetryAction" freq="2" interval="15000" file="BankLog.log" time="3000" query="jdbc:oracle:thin:@127.0.0.1:1521:XE" username="System" password="ggansaal"></RETRY>
+			</SQl_EXCEPTION>
+			
+			<SQl_EXCEPTION name="SQLException.17410">
+					<LOG name="LogAction" file="BankLog.log"></LOG>
+					<RETRY name="RetryAction" freq="2" interval="1000" file="BankLog.log" time="3000" query="jdbc:oracle:thin:@127.0.0.1:1521:XE" username="System" password="ggansaal"></RETRY>
+					<EMAIL name="EmailAction" to="gdb_sci123@rediff.com" from="gdb.sci123@gmail.com" subject="Database Connection lost" message="Database Connection lost. Check if database is shut down..."></EMAIL>
+			</SQl_EXCEPTION>
+			
+		</MODULE>
+	</PROJECT>
+	<PROJECT name="LIC"> 
+		<MODULE name="createLICAccount">
+			<INVALID_USER_EXCEPTION name="InvalidUserException">
+					<LOG name="LogAction" file="LICLog.log"> </LOG>
+			</INVALID_USER_EXCEPTION>
+			<INSUFFICIENT_BALANCE_EXCEPTION name="InsufficientBalanceException">
+					<LOG name="LogAction" file="LICLog.log"> </LOG>
+			</INSUFFICIENT_BALANCE_EXCEPTION>
+		</MODULE>
+		<MODULE name="showLICBalance">
+			<INVALID_USER_EXCEPTION name="InvalidUserException">
+					<LOG name="LogAction" file="LICLog.log"> </LOG>
+			</INVALID_USER_EXCEPTION>
+			<INSUFFICIENT_BALANCE_EXCEPTION name="InsufficientBalanceException">
+					<LOG name="LogAction" file="LICLog.log"> </LOG>
+			</INSUFFICIENT_BALANCE_EXCEPTION>
+		</MODULE>
+	</PROJECT>
+</MYLIB>
