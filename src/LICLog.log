@@ -1,0 +1,14 @@
+DEBUG - Here is some DEBUG
+DEBUG - LogAction.doAction(LogAction.java:31)
+DEBUG - ExceptionLibImpl.action(ExceptionLibImpl.java:51)
+DEBUG - ExceptionLibImpl.doActions(ExceptionLibImpl.java:42)
+DEBUG - ExceptionLibImpl.handleException(ExceptionLibImpl.java:18)
+DEBUG - Client.main(Client.java:13)
+DEBUG - *********************
+DEBUG - Here is some DEBUG
+DEBUG - LogAction.doAction(LogAction.java:31)
+DEBUG - ExceptionLibImpl.action(ExceptionLibImpl.java:51)
+DEBUG - ExceptionLibImpl.doActions(ExceptionLibImpl.java:42)
+DEBUG - ExceptionLibImpl.handleException(ExceptionLibImpl.java:18)
+DEBUG - Client.main(Client.java:22)
+DEBUG - *********************

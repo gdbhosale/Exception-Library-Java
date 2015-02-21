@@ -1,0 +1,23 @@
+DEBUG - Here is some DEBUG
+DEBUG - LogAction.doAction(LogAction.java:31)
+DEBUG - RetryAction.doAction(RetryAction.java:70)
+DEBUG - ExceptionLibImpl.action(ExceptionLibImpl.java:51)
+DEBUG - ExceptionLibImpl.doActions(ExceptionLibImpl.java:42)
+DEBUG - ExceptionLibImpl.handleException(ExceptionLibImpl.java:18)
+DEBUG - DBClient.main(DBClient.java:49)
+DEBUG - *********************
+DEBUG - Here is some DEBUG
+DEBUG - LogAction.doAction(LogAction.java:31)
+DEBUG - RetryAction.doAction(RetryAction.java:70)
+DEBUG - ExceptionLibImpl.action(ExceptionLibImpl.java:51)
+DEBUG - ExceptionLibImpl.doActions(ExceptionLibImpl.java:42)
+DEBUG - ExceptionLibImpl.handleException(ExceptionLibImpl.java:18)
+DEBUG - DBClient.main(DBClient.java:49)
+DEBUG - *********************
+ion(LogAction.java:31)
+DEBUG - RetryAction.doAction(RetryAction.java:70)
+DEBUG - ExceptionLibImpl.action(ExceptionLibImpl.java:51)
+DEBUG - ExceptionLibImpl.doActions(ExceptionLibImpl.java:42)
+DEBUG - ExceptionLibImpl.handleException(ExceptionLibImpl.java:18)
+DEBUG - DBClient.main(DBClient.java:49)
+DEBUG - *********************
